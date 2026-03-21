@@ -1,4 +1,5 @@
-/* Mobile layout */
+/* ── Mobile layout ───────────────────────────────────────────── */
+
 .mobileHeader {
   display: flex;
   align-items: center;
@@ -12,22 +13,23 @@
 .mobileMain {
   display: flex;
   flex-direction: column;
-  min-height: calc(100vh - 60px);
+  flex: 1;
+  min-height: 0;
   position: relative;
   z-index: 40;
 }
 
-/* Desktop: hide mobile layout, show fixed UI layer */
+/* ── Desktop: hide mobile, show fixed UI layer ───────────────── */
+
 @media (min-width: 768px) {
-  .mobileHeader {
-    display: none;
-  }
+  .mobileHeader,
   .mobileMain {
     display: none;
   }
 }
 
-/* Desktop UI layer */
+/* ── Desktop UI fixed layer ──────────────────────────────────── */
+
 .ui {
   display: none;
 }
