@@ -1,0 +1,22 @@
+.logo {
+  display: inline-block;
+  text-decoration: none;
+  font-family: 'Droulers', sans-serif;
+  color: var(--green);
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+}
+
+@media (min-width: 768px) {
+  .logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--col);
+    height: var(--row);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+}

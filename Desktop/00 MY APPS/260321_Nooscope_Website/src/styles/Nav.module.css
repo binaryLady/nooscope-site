@@ -1,0 +1,32 @@
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.nav a {
+  font-family: 'Droulers', sans-serif;
+  text-decoration: none;
+  color: var(--green);
+  white-space: nowrap;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+}
+
+.nav a:hover {
+  opacity: 0.7;
+}
+
+@media (min-width: 768px) {
+  .nav {
+    position: absolute;
+    top: 0;
+    left: var(--col);
+    width: calc(100% - var(--col));
+    height: var(--row);
+    padding: 0 2rem;
+    justify-content: flex-end;
+    overflow: hidden;
+  }
+}
