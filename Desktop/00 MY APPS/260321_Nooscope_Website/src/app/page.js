@@ -3,6 +3,7 @@ import Grid from '@/components/Grid';
 import Logo from '@/components/Logo';
 import Nav from '@/components/Nav';
 import TextPanel from '@/components/TextPanel';
+import AboutDrawer from '@/components/AboutDrawer';
 import styles from '@/styles/page.module.css';
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
         <Nav />
       </header>
       <main className={styles.mobileMain}>
+        <AboutDrawer />
         <TextPanel />
       </main>
 
@@ -24,6 +26,7 @@ export default function Home() {
       <div className={styles.ui}>
         <Logo />
         <Nav />
+        <AboutDrawer />
         <TextPanel />
       </div>
     </>

@@ -1,0 +1,123 @@
+/* ── Mobile base ─────────────────────────────────────────────── */
+
+.container {
+  width: 100%;
+  position: relative;
+  z-index: 40;
+}
+
+.trigger {
+  width: 100%;
+  padding: 1rem 1.25rem;
+  background: transparent;
+  border: none;
+  border-top: 1px solid var(--green);
+  border-bottom: 1px solid var(--green);
+  font-family: 'Droulers', sans-serif;
+  color: var(--green);
+  cursor: pointer;
+  text-align: left;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+}
+
+.trigger:hover {
+  opacity: 0.7;
+}
+
+/* Slide down on mobile */
+.overlay {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition:
+    max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.3s ease;
+}
+
+.overlay.open {
+  max-height: 80vh;
+  opacity: 1;
+}
+
+.copy {
+  padding: 1.25rem;
+  font-family: 'Droulers', sans-serif;
+  color: var(--green);
+  font-size: 0.85rem;
+  line-height: 1.7;
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.copy::-webkit-scrollbar {
+  display: none;
+}
+
+.copy p + p {
+  margin-top: 0.875rem;
+}
+
+/* ── Desktop overrides ───────────────────────────────────────── */
+
+@media (min-width: 768px) {
+  .container {
+    position: absolute;
+    top: var(--row);
+    left: 0;
+    width: var(--col);
+    height: calc(100% - var(--row));
+  }
+
+  /* Vertical label button fills the full lower-left quadrant */
+  .trigger {
+    position: absolute;
+    inset: 0;
+    border: none;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+  }
+
+  /* Slide in from left on desktop */
+  .overlay {
+    position: fixed;
+    top: var(--row);
+    left: 0;
+    width: var(--col);
+    height: calc(100% - var(--row));
+    z-index: 30;
+    max-height: none;
+    overflow-y: auto;
+    transform: translateX(-100%);
+    display: block;
+    opacity: 0;
+    transition:
+      transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+      opacity 0.3s ease;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .overlay::-webkit-scrollbar {
+    display: none;
+  }
+
+  .overlay.open {
+    transform: translateX(0);
+    opacity: 1;
+    /* Override mobile max-height reset */
+    max-height: none;
+  }
+
+  .copy {
+    padding: 1.5rem 1rem;
+    height: 100%;
+    overflow-y: auto;
+  }
+}
