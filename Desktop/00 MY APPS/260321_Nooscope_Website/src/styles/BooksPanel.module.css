@@ -45,6 +45,7 @@
   line-height: 1.6;
   text-align: justify;
   max-width: 55ch;
+  text-shadow: 0 0 0.5px currentColor;
 }
 
 /* ── Desktop overrides ───────────────────────────────────────── */

@@ -4,9 +4,7 @@ const DESC =
   "is an artist book created by Alexey Yurenev in collaboration with designer Teun van der Heijden and the Anti-Kriegs-Museum in Berlin. It is one of several outcomes of Silent Hero, a visual research project and historical investigation into Yurenev's grandfather's unspoken experience during World War II.";
 
 const BOOKS = [
-  { id: 1, title: 'Seeing Against Seeing', thumb: null, description: DESC },
-  { id: 2, title: 'Seeing Against Seeing', thumb: null, description: DESC },
-  { id: 3, title: 'Seeing Against Seeing', thumb: null, description: DESC },
+  { id: 1, title: 'Seeing Against Seeing', thumb: '/books/book-1-thumb.jpg', description: DESC },
 ];
 
 export default function BooksPanel({ open }) {
