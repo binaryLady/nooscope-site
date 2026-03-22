@@ -9,6 +9,7 @@ import AboutDrawer from './AboutDrawer';
 import TextPanel from './TextPanel';
 import BooksPanel from './BooksPanel';
 import BookSlideshow from './BookSlideshow';
+import BookInfo from './BookInfo';
 import styles from '@/styles/page.module.css';
 
 export default function AppShell() {
@@ -57,6 +58,7 @@ export default function AppShell() {
           <BooksPanel open={booksOpen} onBookSelect={handleBookSelect} />
         )}
         <BookSlideshow book={selectedBook} onClose={handleSlideshowClose} />
+        <BookInfo book={selectedBook} />
       </div>
     </>
   );
