@@ -20,17 +20,12 @@
   display: flex;
   gap: 1.5rem;
   padding: 1.5rem 0;
-  border-bottom: 1px solid var(--green);
   align-items: flex-start;
-}
-
-.item:first-child {
-  border-top: 1px solid var(--green);
 }
 
 .thumb {
   flex: 0 0 120px;
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 1;
   background: #c8c8c8;
   overflow: hidden;
 }
@@ -49,7 +44,7 @@
   font-size: 1.235rem;
   line-height: 1.6;
   text-align: justify;
-  max-width: 60ch;
+  max-width: 55ch;
 }
 
 /* ── Desktop overrides ───────────────────────────────────────── */
@@ -58,20 +53,39 @@
   .panel {
     position: absolute;
     top: var(--x-line);
-    left: var(--y-line);
-    right: 0;
+    /* Gap between Y line and thumbnail */
+    left: calc(var(--y-line) + 3rem);
+    /* Right edge aligns with the Books link at right: 10% */
+    right: 10%;
+    /* Reset mobile width: 100% so left+right determine width */
+    width: auto;
     height: calc(100% - var(--x-line));
-    padding: 2rem 3rem 2rem 2.5rem;
+    padding: 2rem 0;
     overflow-y: auto;
+    overflow-x: hidden;
     background: white;
   }
 
+  .list {
+    width: 100%;
+  }
+
   .item {
+    width: 100%;
     gap: 2.5rem;
     padding: 2rem 0;
+    box-sizing: border-box;
   }
 
   .thumb {
-    flex: 0 0 200px;
+    flex: 0 0 180px;
+  }
+
+  /* 55ch wide, pushed to the panel's right edge = BOOKS position */
+  .desc {
+    flex: 0 0 55ch;
+    min-width: 0;
+    max-width: 55ch;
+    margin-left: auto;
   }
 }
