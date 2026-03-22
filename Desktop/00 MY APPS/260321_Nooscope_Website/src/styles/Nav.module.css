@@ -5,7 +5,8 @@
   list-style: none;
 }
 
-.nav a {
+.nav a,
+.navBtn {
   font-family: 'Droulers', sans-serif;
   text-decoration: none;
   color: var(--green);
@@ -17,7 +18,21 @@
   display: block;
 }
 
-.nav a:hover {
+/* Button reset for Books */
+.navBtn {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.nav a:hover,
+.navBtn:hover {
+  font-style: italic;
+}
+
+/* Active state when books panel is open */
+.navBtn.active {
   font-style: italic;
 }
 

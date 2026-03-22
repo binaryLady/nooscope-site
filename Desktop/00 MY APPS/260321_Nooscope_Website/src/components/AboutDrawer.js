@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 import styles from '@/styles/AboutDrawer.module.css';
 
-export default function AboutDrawer() {
+export default function AboutDrawer({ hidden }) {
   const [open, setOpen] = useState(false);
   const panelRef = useRef(null);
 
@@ -17,6 +17,8 @@ export default function AboutDrawer() {
       document.documentElement.style.removeProperty('--y-line');
     }
   }, [open]);
+
+  if (hidden) return null;
 
   return (
     <>

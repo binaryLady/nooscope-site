@@ -1,34 +1,5 @@
-import Background from '@/components/Background';
-import Grid from '@/components/Grid';
-import Logo from '@/components/Logo';
-import Nav from '@/components/Nav';
-import TextPanel from '@/components/TextPanel';
-import AboutDrawer from '@/components/AboutDrawer';
-import styles from '@/styles/page.module.css';
+import AppShell from '@/components/AppShell';
 
 export default function Home() {
-  return (
-    <>
-      <Background />
-      <Grid />
-
-      {/* Mobile layout */}
-      <header className={styles.mobileHeader}>
-        <Logo />
-        <Nav />
-      </header>
-      <main className={styles.mobileMain}>
-        <AboutDrawer />
-        <TextPanel />
-      </main>
-
-      {/* Desktop layout */}
-      <div className={styles.ui}>
-        <Logo />
-        <Nav />
-        <AboutDrawer />
-        <TextPanel />
-      </div>
-    </>
-  );
+  return <AppShell />;
 }

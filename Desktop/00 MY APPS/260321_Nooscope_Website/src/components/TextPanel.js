@@ -1,6 +1,8 @@
 import styles from '@/styles/TextPanel.module.css';
 
-export default function TextPanel() {
+export default function TextPanel({ hidden }) {
+  if (hidden) return null;
+
   return (
     <div className={styles.panel}>
       <div className={styles.copy}>
