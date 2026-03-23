@@ -100,10 +100,20 @@
   outline-offset: 2px;
 }
 
+/* ── Mobile-only items ───────────────────────────────────────── */
+
+.mobileOnly {
+  display: list-item;
+}
+
 /* ── Desktop ─────────────────────────────────────────────────── */
 
 @media (min-width: 1024px) {
   .hamburger {
+    display: none;
+  }
+
+  .mobileOnly {
     display: none;
   }
 
@@ -133,8 +143,8 @@
     font-size: var(--font-size-nav-lg);
   }
 
-  /* Last item anchored near the X line */
-  .list li:last-child {
+  /* Books item anchored near the X line */
+  .list li:nth-child(2) {
     position: fixed;
     top: calc(20% - 22px);
     right: 10%;
