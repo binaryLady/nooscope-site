@@ -109,6 +109,7 @@
   }
 
   .container {
+    display: block;
     position: absolute;
     top: var(--x-line);
     left: 0;
@@ -128,11 +129,6 @@
     text-transform: uppercase;
     padding: 0;
     background: transparent;
-  }
-
-  /* Hide mobile overlay on desktop */
-  .overlay {
-    display: none;
   }
 
   /* Desktop about text panel — fixed to base column, 50ch wide */
