@@ -1,20 +1,16 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import styles from '@/styles/Nav.module.css';
 
-export default function Nav({ onBooksClick, booksOpen, onAboutClick, aboutOpen }) {
+export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
 
-  function handleBooksClick() {
-    setMenuOpen(false);
-    onBooksClick();
-  }
-
-  function handleAboutClick() {
-    setMenuOpen(false);
-    if (onAboutClick) onAboutClick();
-  }
+  const isBooks = pathname.startsWith('/books');
+  const isAbout = pathname === '/about';
 
   return (
     <nav className={styles.nav} aria-label="Main navigation">
@@ -44,24 +40,22 @@ export default function Nav({ onBooksClick, booksOpen, onAboutClick, aboutOpen }
           </a>
         </li>
         <li>
-          <button
-            className={`${styles.navBtn} ${booksOpen ? styles.active : ''}`}
-            onClick={handleBooksClick}
-            type="button"
-            aria-pressed={booksOpen}
+          <Link
+            href="/books"
+            className={`${styles.navLink} ${isBooks ? styles.active : ''}`}
+            onClick={() => setMenuOpen(false)}
           >
             Books
-          </button>
+          </Link>
         </li>
         <li className={styles.mobileOnly}>
-          <button
-            className={`${styles.navBtn} ${aboutOpen ? styles.active : ''}`}
-            onClick={handleAboutClick}
-            type="button"
-            aria-pressed={aboutOpen}
+          <Link
+            href="/about"
+            className={`${styles.navLink} ${isAbout ? styles.active : ''}`}
+            onClick={() => setMenuOpen(false)}
           >
             About
-          </button>
+          </Link>
         </li>
       </ul>
     </nav>
