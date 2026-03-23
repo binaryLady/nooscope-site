@@ -1,4 +1,4 @@
-/* ── Home page: parallax book images with glass text overlay (mobile) ── */
+/* ── Home: book images behind glass text (mobile only) ── */
 
 .homeWrap {
   position: relative;
@@ -6,15 +6,25 @@
   flex: 1;
   display: flex;
   flex-direction: column;
+  background: transparent;
 }
 
-/* Slideshow sits in flow, text overlays it via negative margin */
+/* Fixed behind the scrolling text */
 .mobileOnly {
-  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
 }
 
 @media (min-width: 1024px) {
   .mobileOnly {
     display: none;
+  }
+
+  .homeWrap {
+    display: contents;
   }
 }
