@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <>
       <div className={styles.mobileOnly}>
-        <BookSlideshow book={BOOKS[0]} showClose={false} />
+        <BookSlideshow book={BOOKS[0]} mobile showClose={false} />
       </div>
       <TextPanel />
     </>
