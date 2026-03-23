@@ -1,10 +1,29 @@
-/* Show book slideshow overlay on mobile only */
-.mobileOnly {
-  display: block;
+/* ── Home page: parallax images + glass text overlay (mobile only) ── */
+
+.homeWrap {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
 }
 
+/* Images fixed behind, creating parallax as text scrolls over */
+.mobileOnly {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 0;
+  overflow: hidden;
+}
+
+/* Hide on desktop */
 @media (min-width: 1024px) {
   .mobileOnly {
     display: none;
+  }
+
+  .homeWrap {
+    min-height: unset;
   }
 }

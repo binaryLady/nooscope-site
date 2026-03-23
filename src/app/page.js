@@ -5,11 +5,11 @@ import styles from '@/styles/HomeSlideshow.module.css';
 
 export default function Home() {
   return (
-    <>
+    <div className={styles.homeWrap}>
       <div className={styles.mobileOnly}>
         <BookSlideshow book={BOOKS[0]} mobile showClose={false} />
       </div>
       <TextPanel />
-    </>
+    </div>
   );
 }
