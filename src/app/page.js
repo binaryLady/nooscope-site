@@ -11,9 +11,11 @@ export default function Home() {
         <BookSlideshow book={BOOKS[0]} mobile showClose={false} />
       </div>
       <div className={styles.textOverlay}>
-        <TextPanel />
-        <div className={styles.aboutSection}>
-          <AboutText />
+        <div className={styles.glassPane}>
+          <TextPanel />
+          <div className={styles.aboutSection}>
+            <AboutText />
+          </div>
         </div>
       </div>
     </div>
