@@ -9,7 +9,9 @@ export default function Home() {
       <div className={styles.mobileOnly}>
         <BookSlideshow book={BOOKS[0]} mobile showClose={false} />
       </div>
-      <TextPanel />
+      <div className={styles.textOverlay}>
+        <TextPanel />
+      </div>
     </div>
   );
 }

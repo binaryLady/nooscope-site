@@ -1,22 +1,30 @@
-/* ── Home: book images behind glass text (mobile only) ── */
+/* ── Home: book images with glass text overlay (mobile only) ── */
 
 .homeWrap {
   position: relative;
   width: 100%;
   flex: 1;
-  display: flex;
-  flex-direction: column;
-  background: transparent;
 }
 
-/* Fixed behind the scrolling text */
+/* Images fill the homeWrap */
 .mobileOnly {
-  position: fixed;
+  display: block;
+}
+
+/* Text overlays the images */
+.textOverlay {
+  position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100vh;
-  z-index: -1;
+  right: 0;
+  bottom: 0;
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.textOverlay::-webkit-scrollbar {
+  display: none;
 }
 
 @media (min-width: 1024px) {
@@ -25,6 +33,12 @@
   }
 
   .homeWrap {
+    display: contents;
+  }
+
+  .textOverlay {
+    position: static;
+    overflow: visible;
     display: contents;
   }
 }
