@@ -63,7 +63,7 @@
 
 /* ── Desktop overrides ───────────────────────────────────────── */
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .panel {
     position: absolute;
     top: var(--x-line);

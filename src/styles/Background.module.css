@@ -3,6 +3,7 @@
   inset: 0;
   z-index: 0;
   background: white;
+  display: none;
 }
 
 .bg img {
@@ -15,4 +16,10 @@
 
 .white img {
   opacity: 0;
+}
+
+@media (min-width: 1024px) {
+  .bg {
+    display: block;
+  }
 }

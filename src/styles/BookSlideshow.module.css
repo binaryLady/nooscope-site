@@ -28,6 +28,8 @@
   scroll-snap-type: y mandatory;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  touch-action: pan-y;
+  -webkit-overflow-scrolling: touch;
 }
 
 .slides::-webkit-scrollbar {
@@ -81,7 +83,7 @@
 
 /* ── Desktop: right half only, full height ───────────────────── */
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .container {
     /* Covers both upper-right and lower-right quadrants */
     position: absolute;

@@ -33,9 +33,51 @@ html, body {
   -webkit-text-stroke: 0.35px currentColor;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   html, body {
     height: 100%;
     overflow: hidden;
   }
+}
+
+/* ── Focus visible ─────────────────────────────────────────── */
+
+*:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 2px;
+}
+
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* ── Reduced motion ────────────────────────────────────────── */
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ── Skip to content ───────────────────────────────────────── */
+
+.skip-link {
+  position: fixed;
+  top: -100%;
+  left: 1rem;
+  z-index: 9999;
+  background: var(--green);
+  color: white;
+  padding: 0.5rem 1rem;
+  font-family: 'Droulers', sans-serif;
+  font-size: 0.875rem;
+  text-decoration: none;
+  border-radius: 0 0 4px 4px;
+}
+
+.skip-link:focus {
+  top: 0;
 }

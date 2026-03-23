@@ -44,6 +44,11 @@ export default function AppShell() {
 
   return (
     <>
+      {/* Skip to content link */}
+      <a href="#main-content" className="skip-link">
+        Skip to content
+      </a>
+
       <Background white={booksOpen} />
       <Grid />
 
@@ -52,9 +57,8 @@ export default function AppShell() {
         <Logo />
         <Nav onBooksClick={toggleBooks} booksOpen={booksOpen} />
       </header>
-      <main className={styles.mobileMain}>
+      <main id="main-content" className={styles.mobileMain}>
         {showSlideshow ? (
-          /* Book detail: images stacked, text below */
           <>
             <BookSlideshow book={selectedBook} onClose={handleSlideshowClose} mobile />
             <BookInfo book={selectedBook} />
@@ -70,9 +74,11 @@ export default function AppShell() {
       </main>
 
       {/* Desktop layout */}
-      <div className={styles.ui}>
-        <Logo />
-        <Nav onBooksClick={toggleBooks} booksOpen={booksOpen} />
+      <div className={styles.ui} role="main" aria-label="Desktop layout">
+        <header>
+          <Logo />
+          <Nav onBooksClick={toggleBooks} booksOpen={booksOpen} />
+        </header>
         <AboutDrawer hidden={booksOpen} />
         <TextPanel hidden={booksOpen} />
         {!showSlideshow && (
