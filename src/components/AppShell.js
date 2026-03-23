@@ -14,10 +14,18 @@ import styles from '@/styles/page.module.css';
 
 export default function AppShell() {
   const [booksOpen, setBooksOpen] = useState(false);
+  const [aboutOpen, setAboutOpen] = useState(false);
   const [selectedBook, setSelectedBook] = useState(null);
 
   function toggleBooks() {
     setBooksOpen(o => !o);
+    setAboutOpen(false);
+    setSelectedBook(null);
+  }
+
+  function toggleAbout() {
+    setAboutOpen(o => !o);
+    setBooksOpen(false);
     setSelectedBook(null);
   }
 
