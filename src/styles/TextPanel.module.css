@@ -41,7 +41,12 @@
     height: calc(100% - var(--x-line));
     min-height: unset;
     padding: 2rem;
+    margin-top: 0;
+    border-radius: 0;
     background: transparent;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    z-index: auto;
   }
 
   .copy {
