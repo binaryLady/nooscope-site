@@ -1,4 +1,5 @@
 import TextPanel from '@/components/TextPanel';
+import { AboutText } from '@/components/AboutDrawer';
 import BookSlideshow from '@/components/BookSlideshow';
 import { BOOKS } from '@/data/books';
 import styles from '@/styles/HomeSlideshow.module.css';
@@ -11,6 +12,9 @@ export default function Home() {
       </div>
       <div className={styles.textOverlay}>
         <TextPanel />
+        <div className={styles.aboutSection}>
+          <AboutText />
+        </div>
       </div>
     </div>
   );
