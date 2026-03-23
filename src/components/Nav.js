@@ -30,7 +30,7 @@ export default function Nav({ onBooksClick, booksOpen }) {
         {!booksOpen && (
           <li>
             <a
-              href="https://nooscope.bigcartel.com"
+              href="https://buy.stripe.com/6oU28q3bp1qDg4q7Kgak008"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.navLink}

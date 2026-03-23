@@ -74,7 +74,7 @@ export default function AppShell() {
       </main>
 
       {/* Desktop layout */}
-      <div className={styles.ui} role="main" aria-label="Desktop layout">
+      <div className={styles.ui} aria-label="Desktop layout">
         <header>
           <Logo />
           <Nav onBooksClick={toggleBooks} booksOpen={booksOpen} />
