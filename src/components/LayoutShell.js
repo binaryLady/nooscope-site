@@ -21,24 +21,23 @@ export default function LayoutShell({ children }) {
       <Background white={isBooks} />
       <Grid />
 
-      {/* Mobile layout */}
+      {/* Mobile header (hidden on desktop via CSS) */}
       <header className={styles.mobileHeader}>
         <Logo />
         <Nav />
       </header>
-      <main id="main-content" className={styles.mobileMain}>
+
+      {/* Desktop chrome: Logo + Nav + About trigger (hidden on mobile via CSS) */}
+      <div className={styles.desktopChrome}>
+        <Logo />
+        <Nav />
+        <AboutDrawer hidden={isBooks} />
+      </div>
+
+      {/* Main content — flows on mobile, positioned absolutely per-component on desktop */}
+      <main id="main-content" className={styles.main}>
         {children}
       </main>
-
-      {/* Desktop layout */}
-      <div className={styles.ui} aria-label="Desktop layout">
-        <header>
-          <Logo />
-          <Nav />
-        </header>
-        <AboutDrawer hidden={isBooks} />
-        {children}
-      </div>
     </>
   );
 }
