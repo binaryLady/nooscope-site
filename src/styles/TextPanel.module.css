@@ -5,7 +5,7 @@
   padding: 1.25rem;
   scrollbar-width: none;
   -ms-overflow-style: none;
-  background: white;
+  background: var(--color-surface);
 }
 
 .panel::-webkit-scrollbar {
@@ -13,10 +13,10 @@
 }
 
 .copy {
-  font-family: 'Droulers', sans-serif;
-  color: var(--green);
-  line-height: 1.65;
-  font-size: 0.9rem;
+  font-family: var(--font-family);
+  color: var(--color-primary);
+  line-height: var(--line-height-body);
+  font-size: var(--font-size-sm);
   text-align: left;
   max-width: 65ch;
 }
@@ -38,8 +38,8 @@
   }
 
   .copy {
-    font-size: 1.235rem;
-    line-height: 1.6;
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-desktop);
     text-align: justify;
     max-width: 75ch;
   }

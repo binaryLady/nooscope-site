@@ -26,7 +26,7 @@
   display: block;
   width: 100%;
   height: 2px;
-  background: var(--green);
+  background: var(--color-primary);
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
@@ -46,14 +46,14 @@
   right: 0;
   width: 200px;
   padding: 4rem 1.25rem 1.5rem;
-  background: white;
+  background: var(--color-surface);
   list-style: none;
   display: flex;
   flex-direction: column;
   gap: 1rem;
   z-index: 55;
   transform: translateX(100%);
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform var(--duration-fast) var(--ease-out);
   box-shadow: -2px 0 8px rgba(0, 0, 0, 0.08);
 }
 
@@ -63,11 +63,11 @@
 
 .navLink,
 .navBtn {
-  font-family: 'Droulers', sans-serif;
+  font-family: var(--font-family);
   text-decoration: none;
-  color: var(--green);
+  color: var(--color-primary);
   white-space: nowrap;
-  font-size: 1.25rem;
+  font-size: var(--font-size-nav);
   letter-spacing: 0.05em;
   text-transform: uppercase;
   line-height: 1.5;
@@ -96,7 +96,7 @@
 .navLink:focus-visible,
 .navBtn:focus-visible,
 .hamburger:focus-visible {
-  outline: 2px solid var(--green);
+  outline: 2px solid var(--color-primary);
   outline-offset: 2px;
 }
 
@@ -130,7 +130,7 @@
 
   .navLink,
   .navBtn {
-    font-size: 1.62rem;
+    font-size: var(--font-size-nav-lg);
   }
 
   /* Last item anchored near the X line */

@@ -6,8 +6,8 @@
   overflow-y: auto;
   scrollbar-width: none;
   -ms-overflow-style: none;
-  background: white;
-  animation: sheetUp 0.35s ease both;
+  background: var(--color-surface);
+  animation: sheetUp var(--duration-fast) ease both;
 }
 
 @keyframes sheetUp {
@@ -26,10 +26,10 @@
 }
 
 .copy {
-  font-family: 'Droulers', sans-serif;
-  color: var(--green);
-  font-size: 0.8rem;
-  line-height: 1.65;
+  font-family: var(--font-family);
+  color: var(--color-primary);
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-body);
   text-align: left;
 }
 
@@ -53,7 +53,7 @@
 .exhibitions li,
 .prices li,
 .collections li {
-  line-height: 1.65;
+  line-height: var(--line-height-body);
   padding-left: 1em;
   text-indent: -1em;
 }
@@ -105,15 +105,15 @@
     height: calc(100% - var(--x-line));
     padding: 1.5rem calc(var(--y-line-base) * 0.06 + 20px);
     overflow-y: auto;
-    background: white;
+    background: var(--color-surface);
     z-index: 44;
-    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: width var(--duration-base) var(--ease-out);
     animation: none;
   }
 
   .copy {
-    font-size: 1.235rem;
-    line-height: 1.6;
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-desktop);
     text-align: justify;
   }
 

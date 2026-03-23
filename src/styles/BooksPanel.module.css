@@ -6,8 +6,8 @@
   padding: 1rem;
   scrollbar-width: none;
   -ms-overflow-style: none;
-  background: white;
-  animation: sheetUp 0.35s ease both;
+  background: var(--color-surface);
+  animation: sheetUp var(--duration-fast) ease both;
 }
 
 @keyframes sheetUp {
@@ -32,7 +32,7 @@
 .item {
   display: flex;
   padding: 1rem 0;
-  border-bottom: 1px solid color-mix(in srgb, var(--green) 20%, transparent);
+  border-bottom: 1px solid color-mix(in srgb, var(--color-primary) 20%, transparent);
 }
 
 .item:last-child {
@@ -55,14 +55,14 @@
 }
 
 .itemBtn:focus-visible {
-  outline: 2px solid var(--green);
+  outline: 2px solid var(--color-primary);
   outline-offset: 4px;
 }
 
 .thumb {
   flex: 0 0 90px;
   aspect-ratio: 1;
-  background: #e8e8e8;
+  background: var(--color-muted);
   overflow: hidden;
   border-radius: 2px;
 }
@@ -76,10 +76,10 @@
 
 .desc {
   flex: 1;
-  font-family: 'Droulers', sans-serif;
-  color: var(--green);
-  font-size: 0.8rem;
-  line-height: 1.6;
+  font-family: var(--font-family);
+  color: var(--color-primary);
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-desktop);
   text-align: left;
 }
 
@@ -96,7 +96,7 @@
     padding: 2rem 0;
     overflow-y: auto;
     overflow-x: hidden;
-    background: white;
+    background: var(--color-surface);
     animation: none;
   }
 
@@ -124,7 +124,7 @@
     flex: 0 0 55ch;
     min-width: 0;
     max-width: 55ch;
-    font-size: 1.235rem;
+    font-size: var(--font-size-base);
     text-align: justify;
     text-shadow: 0 0 0.5px currentColor;
   }

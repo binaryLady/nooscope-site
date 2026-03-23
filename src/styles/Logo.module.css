@@ -5,12 +5,12 @@
 }
 
 .logo:focus-visible {
-  outline: 2px solid var(--green);
+  outline: 2px solid var(--color-primary);
   outline-offset: 4px;
 }
 
 .logoSvg {
-  fill: var(--green);
+  fill: var(--color-primary);
   height: 28px;
   width: auto;
   display: block;

@@ -15,12 +15,12 @@
   padding: 0.75rem 1rem;
   background: transparent;
   border: none;
-  border-bottom: 1px solid var(--green);
-  font-family: 'Droulers', sans-serif;
-  color: var(--green);
+  border-bottom: 1px solid var(--color-primary);
+  font-family: var(--font-family);
+  color: var(--color-primary);
   cursor: pointer;
   text-align: left;
-  font-size: 1.25rem;
+  font-size: var(--font-size-nav);
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -30,7 +30,7 @@
 }
 
 .trigger:focus-visible {
-  outline: 2px solid var(--green);
+  outline: 2px solid var(--color-primary);
   outline-offset: -2px;
 }
 
@@ -40,9 +40,9 @@
   overflow: hidden;
   opacity: 0;
   transition:
-    max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    max-height var(--duration-base) var(--ease-out),
     opacity 0.3s ease;
-  background: white;
+  background: var(--color-surface);
 }
 
 .overlay.open {
@@ -53,10 +53,10 @@
 
 .copy {
   padding: 1rem;
-  font-family: 'Droulers', sans-serif;
-  color: var(--green);
-  font-size: 0.8rem;
-  line-height: 1.65;
+  font-family: var(--font-family);
+  color: var(--color-primary);
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-body);
   text-align: left;
   overflow-y: auto;
   scrollbar-width: none;
@@ -86,13 +86,13 @@
     left: 0;
     width: var(--y-line);
     height: 100%;
-    background: white;
+    background: var(--color-surface);
     z-index: 1;
     opacity: 0;
     pointer-events: none;
     transition:
-      opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1),
-      width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      opacity var(--duration-base) var(--ease-out),
+      width var(--duration-base) var(--ease-out);
   }
 
   .fill.fillOpen {
@@ -115,7 +115,7 @@
     left: calc(var(--y-line-base) * 0.06 + 20px);
     border: none;
     display: inline;
-    font-size: 1.53rem;
+    font-size: var(--font-size-heading);
     text-transform: uppercase;
     padding: 0;
     background: transparent;
@@ -136,15 +136,15 @@
     max-height: calc(93% - 18px);
     overflow-y: auto;
     scrollbar-width: thin;
-    scrollbar-color: var(--green) transparent;
-    font-family: 'Droulers', sans-serif;
-    color: var(--green);
-    font-size: 1.235rem;
-    line-height: 1.6;
+    scrollbar-color: var(--color-primary) transparent;
+    font-family: var(--font-family);
+    color: var(--color-primary);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-desktop);
     text-align: justify;
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.3s ease 0.15s;
+    transition: opacity var(--duration-fast) ease 0.15s;
   }
 
   .aboutPanel::-webkit-scrollbar {
@@ -156,7 +156,7 @@
   }
 
   .aboutPanel::-webkit-scrollbar-thumb {
-    background: var(--green);
+    background: var(--color-primary);
     border-radius: 0;
   }
 
