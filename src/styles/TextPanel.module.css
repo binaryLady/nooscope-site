@@ -8,7 +8,7 @@
   -ms-overflow-style: none;
   position: relative;
   z-index: 1;
-  margin-top: 70vh;
+  margin-top: -3rem;
   border-radius: 1rem 1rem 0 0;
   background: rgba(255, 255, 255, 0.35);
   -webkit-backdrop-filter: blur(12px);
@@ -36,8 +36,8 @@
   .panel {
     position: absolute;
     top: var(--x-line);
-    left: calc(92% - (100% - var(--y-line)) * 0.425);
-    width: calc((100% - var(--y-line)) * 0.425);
+    left: var(--y-line);
+    width: calc(100% - var(--y-line));
     height: calc(100% - var(--x-line));
     min-height: unset;
     padding: 2rem;
